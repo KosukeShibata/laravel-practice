@@ -30,7 +30,7 @@
     <div>
     @foreach($tweets as $tweet)
         <details>
-            <summary>{{ $tweet->content }}</summary>
+            <summary>{{ $tweet->content }}</summary> by {{ $tweet->user->name }}
             <div>
                 <a href="{{ route('tweet.update.index', ['tweetId' => $tweet->id]) }}">編集</a>
                 <form action="{{ route('tweet.delete', ['tweetId' => $tweet->id]) }}" method="post">
